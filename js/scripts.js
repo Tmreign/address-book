@@ -18,6 +18,14 @@ Address.prototype.fullAddress = function() {
   return this.street + ", " + this.city + ", " + this.county;
 }
 
+function resetFields() {
+  $("input#new-first-name").val("");
+  $("input#new-last-name").val("");
+  $("input.new-street").val("");
+  $("input.new-city").val("");
+  $("input.new-county").val("");
+}
+
 
 
 
@@ -48,7 +56,7 @@ $(document).ready(function() {
 
     var inputtedFirstName = $("input#new-first-name").val();
     var inputtedLastName = $("input#new-last-name").val();
-    var newContact = new Contact(inputtedFirstName, inputtedLastName);
+    var newContact = new CoinputtedWholeNamentact(inputtedFirstName, inputtedLastName);
 
     $(".new-address").each(function() {
       var inputtedStreet = $(this).find("input.new-street").val();
@@ -76,6 +84,9 @@ $(document).ready(function() {
     $("input.new-street").val("");
     $("input.new-city").val("");
     $("input.new-county").val("");
+
+
+    
 
   });
 });
